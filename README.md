@@ -2,6 +2,8 @@
 
 [fish shell][fish] functions for iTerm2 v3 Shell Integration
 
+[Why](#why) I did this.
+
 ## How to Use
 
 Put `iterm_shell_integration.fish` in your `.config/fish/functions/` directory.
