@@ -59,7 +59,7 @@ end
     end
 
     iterm2_precmd
-    printf "\033]1337;ShellIntegrationVersion=1\007"
+    printf "\033]1337;ShellIntegrationVersion=2;shell=fish\007"
 
  function -e fish_prompt foo_prop
       iterm2_precmd
