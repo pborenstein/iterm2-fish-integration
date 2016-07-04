@@ -1,9 +1,14 @@
 # Taken from .iterm2_shell_integration.fish
 # see: https://www.iterm2.com/shell_integration.html
-#      https://iterm2.com/misc/fish_startup.in
+  set iterm2_hostname (hostname -f)
+
+# If hostname -f is slow for you, set iterm2_hostname before sourcing this script
+if not set -q iterm2_hostname
+  set iterm2_hostname (hostname -f)
+end
 
 
-function iterm_shell_integration
+
 
     function iterm2_status
       printf "\033]133;D;%s\007" $argv
@@ -47,21 +52,19 @@ function iterm_shell_integration
       iterm2_print_user_vars
     end
 
-    # If hostname -f is slow for you, set iterm2_hostname before sourcing this script
-    if not set -q iterm2_hostname
-      set iterm2_hostname (hostname -f)
-    end
-
-
     function -v _ underscore_change
-      if [ x$_ = xfish ]
-        iterm2_precmd
-      else
+      if [ x$_ != xfish ]
         iterm2_preexec
       end
     end
 
     iterm2_precmd
     printf "\033]1337;ShellIntegrationVersion=1\007"
+
+ function -e fish_prompt foo_prop
+      iterm2_precmd
+  end
+
+function iterm_shell_integration
 end
 
