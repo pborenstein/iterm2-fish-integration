@@ -74,6 +74,7 @@ README.md                    iterm_shell_integration.fish
 
 I took the utility functions defined in
 [`.iterm2_shell_integration.fish`][iterm_fish_fns]
+[b668459](https://github.com/gnachman/iterm2-website/blob/b6684595b61d60064034e04b08b2a7a82339a7e9/source/misc/fish_startup.in)
 and put them in `iterm_shell_integration.fish`
 so I can use them in my own `fish_prompt`.
 
