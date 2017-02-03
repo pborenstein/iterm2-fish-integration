@@ -46,7 +46,7 @@ function iterm2_precmd
   end
 end
 
-function -v _ underscore_change
+function underscore_change -on-variable _
   if [ x$_ != xfish ]
     iterm2_preexec
   end
@@ -55,7 +55,7 @@ end
 iterm2_precmd
 printf "\033]1337;ShellIntegrationVersion=3;shell=fish\007"
 
-function -e fish_prompt iterm2_run_precmd
+function iterm2_run_precmd --on-event fish_prompt
     iterm2_precmd
 end
 
