@@ -1,5 +1,16 @@
 # iterm2-fish-integration
 
+
+> **OBSOLETE**
+>
+> You can use the built-in
+> `iterm2_prompt_mark`
+> to place the mark glyph
+> see **Marks** in the
+> iTerm2 [topic on shell integration](https://www.iterm2.com/documentation-shell-integration.html)
+>
+> so don't use this anymore
+
 [fish shell][fish] functions for iTerm2 v3 Shell Integration
 
 [Why](#why) I did this.
